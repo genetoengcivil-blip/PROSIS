@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-night-950 text-slate-200 antialiased;
+}
+
+/* Estilização Premium para Markdown Prose */
+.prose {
+  @apply text-slate-300 max-w-none;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply text-white font-bold tracking-tight;
+}
+
+.prose strong {
+  @apply text-white font-semibold;
+}
+
+.prose a {
+  @apply text-prosis-blue no-underline hover:underline;
+}
+
+/* Blocos de Código Premium (Estilo VS Code Night) */
+.prose pre {
+  @apply bg-night-900 border border-slate-800 rounded-2xl p-5 my-6 overflow-x-auto shadow-inner !important;
+  font-family: 'Fira Code', 'Courier New', monospace !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+}
+
+.prose pre code {
+  @apply text-slate-300 bg-transparent p-0 font-normal !important;
+}
+
+/* Código Inline */
+.prose :not(pre) > code {
+  @apply text-prosis-blue bg-blue-950/50 px-2 py-0.5 rounded-md font-mono text-xs border border-blue-900;
+}
+
+/* Tabelas e Listas */
+.prose table {
+  @apply w-full text-sm border-collapse my-6;
+}
+
+.prose thead th {
+  @apply text-white border-b border-slate-700 p-3 text-left bg-night-900;
+}
+
+.prose tbody td {
+  @apply border-b border-slate-800 p-3 text-slate-400;
+}
+
+.prose ul, .prose ol {
+  @apply space-y-2 my-4 pl-5 list-disc text-slate-400;
+}
